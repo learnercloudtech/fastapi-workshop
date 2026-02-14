@@ -1,6 +1,7 @@
 """Data models for the Workshop API."""
 
-from pydantic import BaseModel, Field
+
+from pydantic import BaseModel
 from typing import Optional
 
 
@@ -8,7 +9,7 @@ class ProfileCreate(BaseModel):
     """Schema for creating a new profile."""
 
     username: str
-    bio: str = Field(..., max_length=500)
+    bio: str
     age: Optional[int] = None
 
 
